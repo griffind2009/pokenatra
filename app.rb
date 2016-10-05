@@ -14,6 +14,7 @@ end
 get '/pokemons/new' do
   erb :new
 end
+
 post '/pokemons' do
   @pokemon = Pokemon.create(params[:pokemon])
   redirect "/pokemons/#{@pokemon.id}"
